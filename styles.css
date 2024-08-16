@@ -26,10 +26,15 @@ img {
 
 /* end reset  */
 
+@font-face {
+  font-family: 'Norse Bold';
+  src: url(./fonts/Norse-Bold.otf);
+}
+
 :root {
     --main-colour: #F9FAFB;
     --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --form-column-1: 
+    --norse-bold: 'Norse Bold';
 }
 
 body {
@@ -50,6 +55,29 @@ body {
 .container > div {
     padding:45px;
 
+}
+.odin-box {
+    display: flex;
+    height: 110px;
+    z-index: 999;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    padding:20px !important;
+    background: rgb(10, 10, 10); /* Fallback for older browsers without RGBA-support */
+    background: rgba(10, 10, 10, 0.5);
+}
+.odin-box img {
+    height: 100%;
+    object-fit: contain;
+}
+.odin-box p   {
+    color: #fff;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: 'Norse Bold', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .box-1 {
     grid-column-start: 1;
@@ -105,12 +133,45 @@ h2 {
   width:88%;
 }
 .box-3 h2 {
-  margin: 5px 0;
+  margin: 10px 0;
 }
 form {
   display: grid;
   grid-column-start: 1;
   grid-column-end: 3;
+  margin-top: 1.5rem;
+}
+.col-1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.col-2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.row-1 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.row-2 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.row-3 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.row-4 {
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.row-5 {
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+.row-6 {
+  grid-row-start: 6;
+  grid-row-end: 7;
 }
 label {
   text-transform: uppercase;
@@ -122,28 +183,24 @@ label {
 }
 input {
   margin-right: 3rem;
+  margin-bottom: 25px;
+  height:28px;
 }
-#first-name {
-  grid-column-start: 1;
-  grid-column-end: 2; 
-  grid-row-start: 2;
-  grid-row-end: 3;
+input:focus {
+  border: blue 1px solid;
+  box-shadow: 0px 2px 5px 0px #cacaca;
 }
-#last-name {
-  grid-column-start: 2;
-  grid-column-end: 3; 
-  grid-row-start: 2;
-  grid-row-end: 3;
+input:invalid {
+  border: red 1px solid;
+  box-shadow: 0px 2px 5px 0px #cacaca;
 }
-#email {
-  grid-column-start: 1;
-  grid-column-end: 2; 
-  grid-row-start: 3;
-  grid-row-end: 4;
-}
-#tel {
-  grid-column-start: 2;
-  grid-column-end: 3; 
-  grid-row-start: 3;
-  grid-row-end: 4;
+button {
+  width: 225px;
+  height:50px;
+  border-radius: 10px;
+  background-color: #596C48;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
 }
